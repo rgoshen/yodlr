@@ -10,9 +10,14 @@ function NavBar() {
         <Navbar.Brand href='/'>Yodlr</Navbar.Brand>
         <Navbar.Toggle aria-controls='responsive-navbar-nav' />
         <Navbar.Collapse id='responsive-navbar-nav'>
+          <Nav className='me-auto'></Nav>
           <Nav>
-            <Nav.Link href='/signup'>Register Page</Nav.Link>
-            <Nav.Link href='/admin'>Admin</Nav.Link>
+            <Nav.Item>
+              <Nav.Link href='/signup'>Register Page</Nav.Link>
+            </Nav.Item>
+            <Nav.Item>
+              <Nav.Link href='/admin'>Admin</Nav.Link>
+            </Nav.Item>
           </Nav>
         </Navbar.Collapse>
       </Container>
