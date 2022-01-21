@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import Table from 'react-bootstrap/Table';
-import { baseURL } from '../config';
 import axios from 'axios';
+import { baseURL } from '../config';
+import Table from 'react-bootstrap/Table';
+import User from './User';
 
 function Users() {
   const [users, setUsers] = useState([]);
@@ -32,7 +33,7 @@ function Users() {
               <th>last Name</th>
               <th>Email</th>
               <th>State</th>
-              <th>Edit?</th>
+              <th>Save?</th>
               <th>Delete?</th>
             </tr>
           </thead>
@@ -40,13 +41,7 @@ function Users() {
             {users.map((user) => {
               return (
                 <tr key={user.id}>
-                  <td>{user.id}</td>
-                  <td>{user.firstName}</td>
-                  <td>{user.lastName}</td>
-                  <td>{user.email}</td>
-                  <td>{user.state}</td>
-                  <td>{}</td>
-                  <td>{}</td>
+                  <User id={user.id} user={user} />
                 </tr>
               );
             })}
