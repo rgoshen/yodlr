@@ -1,7 +1,11 @@
 import React from 'react';
 
 function Home() {
-  return <h1 className='mt-3'>Yodlr Design Challenge</h1>;
+  return (
+    <div className='container'>
+      <h1 className='mt-5'>Welcome to Yodlr</h1>
+    </div>
+  );
 }
 
 export default Home;

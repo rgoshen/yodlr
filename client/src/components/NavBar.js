@@ -1,24 +1,22 @@
 import React from 'react';
-import {
-  Navbar,
-  Nav,
-  NavItem,
-  NavbarBrand,
-  NavbarToggler,
-  Collapse,
-} from 'reactstrap';
+import Navbar from 'react-bootstrap/Navbar';
+import Nav from 'react-bootstrap/Nav';
+import Container from 'react-bootstrap/Container';
 
 function NavBar() {
   return (
-    <div>
-      <Navbar color='dark' expand='md' dark>
-        <NavbarBrand href='/'>Yodlr</NavbarBrand>
-        <NavbarToggler onClick={function noRefCheck() {}} />
-        <Collapse navbar>
-          <Nav className='me-auto' navbar></Nav>
-        </Collapse>
-      </Navbar>
-    </div>
+    <Navbar collapseOnSelect expand='lg' bg='dark' variant='dark'>
+      <Container>
+        <Navbar.Brand href='/'>Yodlr</Navbar.Brand>
+        <Navbar.Toggle aria-controls='responsive-navbar-nav' />
+        <Navbar.Collapse id='responsive-navbar-nav'>
+          <Nav>
+            <Nav.Link href='#features'>Features</Nav.Link>
+            <Nav.Link href='#pricing'>Pricing</Nav.Link>
+          </Nav>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
   );
 }
 
