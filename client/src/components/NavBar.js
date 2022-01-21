@@ -11,6 +11,7 @@ function NavBar() {
         <Navbar.Toggle aria-controls='responsive-navbar-nav' />
         <Navbar.Collapse id='responsive-navbar-nav'>
           <Nav>
+            <Nav.Link href='/signup'>Register Page</Nav.Link>
             <Nav.Link href='/admin'>Admin</Nav.Link>
           </Nav>
         </Navbar.Collapse>
